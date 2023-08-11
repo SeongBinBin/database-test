@@ -6,33 +6,33 @@ const {Schema} = mongoose
 const userSchema = new Schema({
     name: {
         type: String,
-        required: true
+        required: true,
     },
     email: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
     },
     userId: {
         type: String,
-        required: true
+        required: true,
     },
     password: {
         type: String,
-        required: true
+        required: true,
     },
     isAdmin: {
         type: Boolean,
-        default: false
+        default: false,
     },
     createdAt: {
         type: Date,
-        default: Date.now
+        default: Date.now,
     },
     lastModifiedAt: {
         type: Date,
-        default: Date.now
-    }
+        default: Date.now,
+    },
 })
 
 const User = mongoose.model('User', userSchema)

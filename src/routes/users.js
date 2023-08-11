@@ -53,7 +53,6 @@ router.get('/logout', isAuth, expressAsyncHandler(async (req, res, next) => {
     }
 }))
 
-
 router.put('/:id', isAuth, expressAsyncHandler(async (req, res, next) => {
     const user = await User.findById(req.params.id)
     if(!user){
